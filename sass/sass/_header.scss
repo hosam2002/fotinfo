@@ -1,0 +1,53 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    background-color: $color-tertiary-1;
+    //background-image: linear-gradient(to right, rgba($color-tertiary-1, 1), rgba($color-secondary-1, 1));
+    //url(../img/camp-nou.jpg);
+    /*
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    */
+    //background-size: cover;
+
+    &__text-box {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__logo-icon {
+
+        //background-color: #333;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+
+        .fotinfo-logo {
+            width: 5rem;
+        }
+        
+    }
+}
+
+.heading {
+
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+
+    span {
+        display: block;
+    }
+
+    &__primary--title {
+        font-size: 8rem;
+        letter-spacing: 2.5rem;
+    }
+}

@@ -1,0 +1,125 @@
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin absoluteCenter($top){
+    position: absolute;
+    top: $top;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin position-center($type) {
+
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER 
+
+/*
+
+0 - 600px     :      Phone
+600 - 900px   :      Tablet Portrait
+900 - 1200px  :      Tablet Landscape
+1200px - 1800 :      Current Queries
+1800px +      :      Big Desktop
+
+
+$breakpoint arguments choices:
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+*/
+
+@mixin respond($breakpoint) {
+
+    @if($breakpoint == break345) {
+        @media(max-width: 21.5625em) {@content};    // 345px
+    }
+
+    @if($breakpoint == break405) {
+        @media(max-width: 25.3125em) {@content};    // 405px
+    }
+
+    @if($breakpoint == break475) {
+        @media(max-width: 29.6875em) {@content};    // 485px
+    }
+
+    @if($breakpoint == break535) {
+        @media(max-width: 33.4375em) {@content};    // 535px
+    }
+
+    @if($breakpoint == phone) {
+        @media(max-width: 37.5em) {@content};       // 600px
+    }
+
+    @if($breakpoint == break605) {
+        @media(max-width: 37.8125em) {@content};    // 605px
+    }
+
+    @if($breakpoint == break677) {
+        @media(max-width: 42.3125em) {@content};    // 677px
+    }
+
+    @if($breakpoint == break691) {
+        @media(max-width: 43.1875em) {@content};    // 691px
+    }
+
+    @if($breakpoint == break06) {
+        @media(max-width: 44.125em) {@content};     // 706px
+    }
+
+    @if($breakpoint == break85) {
+        @media(max-width: 49.0625em) {@content};    // 785px
+    }
+
+    @if($breakpoint == break81) {
+        @media(max-width: 55.0625em) {@content};    // 881px
+    }
+
+    @if($breakpoint == tab-port) {
+        @media(max-width: 56.25em) {@content};      // 900px        
+    }
+
+    @if($breakpoint == break11) {
+        @media(max-width: 56.9375em) {@content};    // 911px
+    }
+
+    @if($breakpoint == break24) {
+        @media(max-width: 64em) {@content};         // 1024px
+    }
+    
+    @if($breakpoint == break40) {
+        @media(max-width: 71.25em) {@content};      // 1140px
+    }
+
+    @if($breakpoint == tab-land) {
+        @media(max-width: 75em) {@content};         // 1200px
+    }
+
+    @if($breakpoint == break75-grid) {
+        @media(max-width: 79.6875em) {@content};    // 1275px
+    }
+
+    @if($breakpoint == break35-grid) {
+        @media(max-width: 83.4375em) {@content};    // 1335px
+    }
+
+    @if($breakpoint == break94) {
+        @media(max-width: 93.375em) {@content};     // 1494px
+    }
+
+    @if($breakpoint == big-desktop) {
+        @media(min-width: 112.5) {@content};        // 1800px
+        
+    }
+}

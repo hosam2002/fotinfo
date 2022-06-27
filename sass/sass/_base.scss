@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%; // 10px
+
+    @include respond(break40) {
+        font-size: 50%;
+    }
+
+    @include respond(break85) {
+        font-size: 45%;
+    }
+
+    @include respond(break605) {
+        font-size: 40%;
+    }
+
+    @include respond(phone){
+        font-size: 35%;
+    }
+
+    @include respond(break535) {
+        font-size: 35%;
+    }
+
+    @include respond(break475) {
+        font-size: 30%;
+    }
+
+    @include respond(break405) {
+        font-size: 25%;
+    }
+}
+
+body {
+
+    box-sizing: border-box;
+    font-family: "maven pro", sans-serif;
+    padding: 1.5rem;
+
+    @include respond(break35-grid) {
+        padding: 0;
+    }
+}

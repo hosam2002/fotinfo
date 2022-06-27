@@ -1,0 +1,28 @@
+.heading-primary {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right, rgba($color-tertiary-1, 1), rgba($color-secondary-1, 1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.news-header {
+
+    text-align: left;
+    color: $color-grey-2;
+
+    .heading-tertiary {
+        font-size: 1.6rem;
+        font-weight: 450;
+        text-transform: uppercase;
+    }
+}
+
+.news-content {
+    text-align: left;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: $color-grey-2;
+    line-height: 1.4;
+}

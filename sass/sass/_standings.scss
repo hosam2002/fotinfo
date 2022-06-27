@@ -1,0 +1,219 @@
+.section-standings {
+    
+    &__container {
+        
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        .container__items {
+            
+            width: 80%;
+            height: 7rem;
+            background-color: rgba($color: $color-white, $alpha: .6);
+            //clip-path: polygon(0 0, 100% 0, 97% 100%, 0 100%);
+            border-radius: 4px;
+
+
+            &-text-guide {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: 10rem;
+
+                @include respond(break345) {
+                    height: 7.5rem;
+                }
+
+                section {
+                    display: flex;
+                    width: 10rem;
+                    height: 5rem;
+                    //background-color: $color-white;
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-white;
+                    
+                    &:not(:last-child) {
+                        margin-right: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.items {
+
+    display: flex;
+    justify-content: flex-start;
+
+    section {
+        width: 10rem;
+        height: 100%;
+        color: $color-white;
+        //background-color: #333;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    // CLUB LOGO
+
+    &__logo {
+
+        background: url(../img/logo-barca-red.png) no-repeat;
+        background-size: 4.5rem;
+        background-position: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    &__logo-2 {
+
+        background: url(../img/logo-real-red.png) no-repeat;
+        background-size: 5.5rem;
+        background-position: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    &__logo-3 {
+
+        background: url(../img/logo-atletico-red.png) no-repeat;
+        background-size: 5rem;
+        background-position: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    /*
+
+    &__logo-4 {
+
+    }
+
+    */
+
+    // PLAYED GAMES
+
+    &__match {
+        font-family: lato;
+        display: flex;
+        font-size: $standings-font-size;
+        font-weight: 300;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        border-left: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    /*
+
+    &__match-2 {
+
+    }
+
+    &__match-3 {
+
+    }
+
+    */
+
+    /*
+
+    &__match-4 {
+
+    }
+
+    */
+
+    // NEXT MATCH
+
+    &__next {
+        font-family: lato;
+        display: flex;
+        font-size: $standings-font-size;
+        font-weight: 300;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        border-left: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    /*
+
+    &__next-2 {
+
+    }
+
+    &__next-3 {
+
+    }
+
+    */
+
+    /*
+
+    &__next-4 {
+
+    }
+
+    */
+
+    // POINTS
+
+    &__point {
+        font-family: lato;
+        display: flex;
+        font-size: $standings-font-size;
+        font-weight: 300;
+        text-transform: uppercase;
+        align-items: center;
+        justify-content: center;
+
+        /*
+        border-right: .5px solid rgba($color-grey-3, .3);
+        border-left: .5px solid rgba($color-grey-3, .3);
+        */
+    }
+
+    /*
+
+    &__point-2 {
+        
+    }
+
+    &__point-3 {
+        
+    }
+
+    */
+
+    /*
+
+    &__point-4 {
+        
+    }
+
+    */
+}

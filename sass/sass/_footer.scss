@@ -1,0 +1,159 @@
+.footer {
+    width: 100%;
+    height: 45rem;
+    background-color: $color-black-2;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    position: relative;
+
+    @include respond(break06) {
+        height: 35rem;
+    }
+
+    &__icon {
+        width: 5.5rem;
+        height: 5.5rem;
+        //background-color: #DDD;
+
+        @include absCenter;
+        top: 20%;
+
+        background-image: url(../img/Fotinfo-logo-white-2.png);
+        background-size: 100%;
+
+        @include respond(break11) {
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
+
+    div {
+
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $color-white;
+        padding-top: 1.5rem;
+        border-top: .1px solid $color-white;
+        box-sizing: border-box;
+        //background-color: #0FF;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+
+            @include respond(break677) {
+                margin-right: .5rem;
+            }
+        }
+
+        @include respond(break81) {
+            font-size: 1.4rem;
+        }
+
+        @include respond(break677) {
+            font-size: 1.2rem;
+        }
+
+        @include respond(break475) {
+            font-size: 1rem;
+        }
+    }
+
+    &__left-container {
+        
+        width: 35%;
+        height: 60%;
+        box-sizing: border-box;
+        //background-color: #0FF;
+
+        @include respond(break94) {  // 1494
+            width: 45%;
+        }
+
+        @include respond(break11) {  // 911
+            width: 46.5%;
+        }
+
+        @include respond(break11) {
+            width: 47.5%
+        }
+
+        @include respond(break691) {
+            width: 48.5%;
+        }
+
+        @include respond(break677) {
+            width: 49%;
+        }
+
+        @include respond(break535) {
+            width: 47.5%;
+        }
+
+        @include respond(break475) {
+            width: 46%;
+        }
+
+        @include respond(break405) {
+            width: 45%;
+        }
+
+        .left-container--items {
+            list-style-type: none;
+            
+            li {
+                display: inline-block;
+                //background-color: #FFF;
+                
+                &:not(:last-child) {
+                    margin-right: 1.5rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-white
+                }
+            }
+        }
+    }
+
+    &__right-container {
+        width: 35%;
+        height: 60%;
+        //background-color: #0FF;
+
+        @include respond(break94) {  // 1494
+            width: 45%;
+        } 
+        
+        @include respond(break11) {  // 911
+            width: 46.5%;
+        }
+
+        @include respond(break06) {
+            width: 47.5%
+        }
+
+        @include respond(break691) {
+            width: 48.5%;
+        }
+
+        @include respond(break677) {
+            width: 49%;
+        }
+
+        @include respond(break535) {
+            width: 47.5%;
+        }
+
+        @include respond(break475) {
+            width: 46%;
+        }
+
+        @include respond(break405) {
+            width: 45%;
+        }
+    }
+}

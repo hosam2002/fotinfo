@@ -1,0 +1,140 @@
+.navigation{
+
+    &__checkbox {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        visibility: hidden;
+    }
+
+    &__label {
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-white;
+        color: $color-black;
+        position: absolute;
+        top: 2.5rem;
+        left: 2.5rem;
+        cursor: pointer;
+        border-radius: $border-radius-small;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            width: 2.5rem;
+            height: .15rem;
+            //@include absCenter;
+            position: relative;
+            background-color: $color-tertiary-1;
+            display: inline-block;
+
+            &::before,
+            &::after {
+                display: inline-block;
+                background-color: inherit;
+                width: 2.5rem;
+                height: .15rem;
+                position: absolute;
+                transition: all .2s;
+            }
+
+            &::before {
+                content: "";
+                top: -1rem;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                top: 1rem;
+                left: 0;
+            }
+        }
+    }
+    
+    /*
+    &__icon {
+        font-size: 2.5rem;
+        color: $color-tertiary-1;
+        @include absCenter;
+        font-weight: 600;
+        z-index: 9000;
+    }
+    */
+
+    &__menu {
+        position: absolute;
+        width: 25rem;
+        height: 37.5rem;
+        left: 2.5rem;
+        top: 9rem;
+        background-color: $color-white;
+        transition: all .8s;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .1);
+        margin-left: -50rem;
+        opacity: 0;
+        border-radius: $border-radius-small;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        section {
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(to right, $color-tertiary-1 5%, transparent 0%);
+            background-size: 100%;
+            transition: all .5s;
+            //background-color: $color-secondary-1;
+            height: 5rem;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            padding-left: 2rem;
+            box-sizing: border-box;
+
+            &:first-child {
+                margin-top: 3.5rem;
+            }            
+
+            &:not(:last-child) {
+                margin-bottom: 3.5rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-black;
+                transition: color .4s;
+            }
+
+            &:hover {
+                background-size: 1995%;                
+                a {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+
+    &__checkbox:checked ~ &__menu {
+        margin: 0;
+        opacity: 1;
+    }
+
+    &__checkbox:checked + &__label &__icon {
+        visibility: hidden;
+    }
+
+    &__checkbox:checked + &__label &__icon::before {
+        
+        transform: rotate(135deg);
+        top: 0;
+        visibility: visible !important;
+    }
+
+    &__checkbox:checked + &__label &__icon::after {
+        
+        transform: rotate(-135deg);
+        top: 0;
+        visibility: visible !important;
+    }
+}
